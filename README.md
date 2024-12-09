@@ -24,7 +24,7 @@ I'm currently building my project portfolio and looking forward to adding exciti
 
 ## 📫 How to reach me
 - LinkedIn: [Monthusi Busang](mailto:monthusi.busang@botho.ac.bw)
-- Email: monthusoratilebusang@gmail.com
+- Email: monthusioratilebusang@gmail.com
 
 ---
 ⭐️ From [monthusioratil](https://github.com/monthusioratil)
