@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botswana's Zebras Secure AFCON 2025 Qualification | Sported Corner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing the same styles from the main index.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+            text-decoration: none;
+        }
+        
+        .slogan {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+        
+        /* Article page specific styles */
+        .article-page {
+            padding: 40px 0;
+        }
+        
+        .news-article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .article-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .article-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .article-date, .article-author {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        .article-featured-image {
+            margin-bottom: 30px;
+        }
+        
+        .article-featured-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-content {
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 20px;
+            color: #333;
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .article-intro {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #444;
+        }
+        
+        .article-highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #ff5722;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .article-highlight-box h3 {
+            margin-bottom: 15px;
+            color: #ff5722;
+        }
+        
+        .article-highlight-box ul {
+            padding-left: 20px;
+        }
+        
+        .article-highlight-box li {
+            margin-bottom: 10px;
+        }
+        
+        .article-tag-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 40px 0;
+        }
+        
+        .article-tag {
+            background-color: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .article-share {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .article-share h3 {
+            margin-bottom: 15px;
+        }
+        
+        .social-share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .share-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .share-button:hover {
+            background-color: #ff5722;
+            color: white;
+        }
+        
+        .related-articles {
+            margin: 60px 0;
+        }
+        
+        .related-articles h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .col-md-4 {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+            padding: 0 15px;
+        }
+        
+        .related-article-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .related-article-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .related-article-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .related-article-card h4 {
+            padding: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+        
+        .mb-5 {
+            margin-bottom: 3rem !important;
+        }
+        
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #e64a19;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 60px 0 0;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links h3 {
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ff5722;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: #ff5722;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #222;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* New styles for featured image */
+        .featured-image {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .full-width-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-title {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .article-meta {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-image {
+                height: 200px;
+            }
+            
+            .full-width-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <a href="index.html" class="logo">Sported Corner</a>
+                <span class="slogan">Sport Thirst at Your Fingertips</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container article-page">
+        <article class="news-article">
+            <header class="article-header">
+                <div class="featured-image">
+                    <img src="./static/images/AFCON article.jpg" alt="Botswana's Zebras" class="full-width-image">
+                </div>
+                <h1 class="article-title">Botswana's Zebras Secure AFCON 2025 Qualification</h1>
+                <div class="article-meta">
+                    <span class="article-date">June 12, 2025</span>
+                    <span class="article-author">By Tshepo Moloi</span>
+                </div>
+            </header>
+            
+            <div class="article-content">
+                <p class="article-intro">In a historic night at the National Stadium, Botswana's national football team, the Zebras, secured their place in the 2025 Africa Cup of Nations with a dramatic 2-1 victory over Egypt.</p>
+                
+                <h2>Decisive Match Against Egypt</h2>
+                <p>The Zebras came from behind to defeat the Pharaohs in front of a sold-out crowd in Gaborone. After going down 1-0 in the first half, second-half goals from Tumisang Orebonye and Thatayaone Ditlhokwe sealed the victory. The winning goal came in the 87th minute, sending the nation into raptures.</p>
+                
+                <h2>Group Stage Opponents</h2>
+                <p>Botswana has been drawn in Group D alongside Nigeria, Algeria, and Uganda. While it's a challenging group, coach Didier Gomes da Rosa believes his team can surprise. "We're not going just to participate," he said. "We've shown we can compete with the best in Africa."</p>
+                
+                <div class="article-highlight-box">
+                    <h3>Key Highlights</h3>
+                    <ul>
+                        <li>First AFCON qualification since 2012</li>
+                        <li>First ever competitive victory over Egypt</li>
+                        <li>Finished top of qualifying group with 13 points</li>
+                        <li>Only conceded 3 goals in 6 qualifying matches</li>
+                        <li>Striker Orebonye finished as group's top scorer with 5 goals</li>
+                    </ul>
+                </div>
+                
+                <h2>National Celebration</h2>
+                <p>Thousands of fans took to the streets across Botswana after the match, with the largest celebrations in Gaborone and Francistown. President Mokgweetsi Masisi declared a public holiday, saying "This is a moment of immense national pride that unites all Batswana."</p>
+                
+                <h2>Looking Ahead</h2>
+                <p>The Botswana Football Association has announced a series of high-profile friendlies to prepare for the tournament in Morocco. There are also plans to upgrade facilities at the National Stadium to meet CAF standards. With the team's current form and the nation behind them, expectations are high for a strong showing at AFCON 2025.</p>
+                
+                <div class="article-tag-box">
+                    <span class="article-tag">Botswana</span>
+                    <span class="article-tag">Zebras</span>
+                    <span class="article-tag">AFCON</span>
+                    <span class="article-tag">Football</span>
+                    <span class="article-tag">Qualification</span>
+                </div>
+            </div>
+            
+            <div class="article-share">
+                <h3>Share This Story</h3>
+                <div class="social-share-buttons">
+                    <a href="#" class="share-button"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-button"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="share-button"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="related-articles">
+                <h3>Related Articles</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="related-article-card">
+                            <div class="related-article-image" style="background-image: url('./static/images/athletics-track.svg');"></div>
+                            <h4>Tebogo's Triumph: Botswana's First Olympic Gold</h4>
+                            <a href="tebogo_gold.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="related-article-card">
+                            <div class="related-article-image" style="background-image: url('./static/images/placeholder.svg');"></div>
+                            <h4>Botswana Football Association Announces Youth Development Program</h4>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="related-article-card">
+                            <div class="related-article-image" style="background-image: url('./static/images/placeholder.svg');"></div>
+                            <h4>AFCON 2025: A Look at All Qualified Teams</h4>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <div class="text-center mt-5 mb-5">
+            <a href="index.html" class="cta-button">Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div class="footer-logo">Sported Corner</div>
+                <p>Your ultimate destination for sports news, scores, and updates from around the world.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Sports</h3>
+                <ul>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Basketball</a></li>
+                    <li><a href="#">Tennis</a></li>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Baseball</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:contact@sportedcorner.co.bw">contact@sportedcorner.co.bw</a></li>
+                    <li><a href="tel:+26776564395">+267 76564395</a></li>
+                    <li><a href="#">Plot 16667, Gaborone, Botswana</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Sported Corner. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni Mpetshi Perricard - Player Profile | Sported Corner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing the same styles from the main index.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+            text-decoration: none;
+        }
+        
+        .slogan {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+        
+        /* Player profile specific styles */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .rounded {
+            border-radius: 10px;
+        }
+        
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
+        
+        .player-profile {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-header h2 {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        .profile-details {
+            margin: 30px 0;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .mb-3 {
+            margin-bottom: 1rem !important;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table th {
+            font-weight: 500;
+            color: #666;
+            width: 40%;
+        }
+        
+        .profile-section {
+            margin: 30px 0;
+        }
+        
+        .emoji {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .list-group {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .list-group-flush .list-group-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #e64a19;
+        }
+        
+        .mt-4 {
+            margin-top: 1.5rem !important;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 60px 0 0;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5722;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links h3 {
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ff5722;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: #ff5722;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #222;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        /* Featured image styles */
+        .featured-image {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .full-width-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-title {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .article-meta {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-image {
+                height: 200px;
+            }
+            
+            .full-width-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <a href="index.html" class="logo">Sported Corner</a>
+                <span class="slogan">Sport Thirst at Your Fingertips</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="featured-image">
+            <img src="./static/images/player-profile.jpg" alt="Giovanni Mpetshi Perricard" class="full-width-image">
+        </div>
+        <div class="article-content">
+            <h1 class="article-title">Giovanni Mpetshi Perricard Rising in Tennis Rankings</h1>
+            <div class="article-meta">
+                <span class="article-date">June 15, 2025</span>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <img src="./static/images/tennis-profile-header.svg" alt="Giovanni Mpetshi Perricard" class="img-fluid rounded" style="max-width: 800px;">
+        </div>
+        
+        <div class="player-profile">
+            <div class="profile-header">
+                <img src="./static/images/tennis-match.svg" alt="Giovanni Mpetshi Perricard" class="rounded-circle" style="width: 100px; height: 100px;">
+                <h2>Giovanni Mpetshi Perricard</h2>
+            </div>
+            
+            <div class="profile-details">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mb-3">Personal Information</h3>
+                        <table class="table">
+                            <tr>
+                                <th>Date of Birth:</th>
+                                <td>May 10, 2003 (Age: 22)</td>
+                            </tr>
+                            <tr>
+                                <th>Nationality:</th>
+                                <td>French</td>
+                            </tr>
+                            <tr>
+                                <th>Birthplace:</th>
+                                <td>Lyon, France</td>
+                            </tr>
+                            <tr>
+                                <th>Height:</th>
+                                <td>6'5" (196 cm)</td>
+                            </tr>
+                            <tr>
+                                <th>Plays:</th>
+                                <td>Right-handed (two-handed backhand)</td>
+                            </tr>
+                            <tr>
+                                <th>Coach:</th>
+                                <td>Thierry Ascione</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <h3 class="mb-3">Rankings & Stats</h3>
+                        <table class="table">
+                            <tr>
+                                <th>Career Prize Money:</th>
+                                <td>$1,250,000</td>
+                            </tr>
+                            <tr>
+                                <th>ATP Singles Ranking:</th>
+                                <td>#48 (Career High: #42)</td>
+                            </tr>
+                            <tr>
+                                <th>ATP Doubles Ranking:</th>
+                                <td>#112</td>
+                            </tr>
+                            <tr>
+                                <th>Grand Slam Bests:</th>
+                                <td>3rd Round (Wimbledon 2024)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h3><span class="emoji">🏆</span> Career Titles</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Tournament</th>
+                            <th>Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024</td>
+                            <td>Lyon Open</td>
+                            <td>ATP 250</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>Orléans Challenger</td>
+                            <td>Challenger</td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td>Saint-Tropez Challenger</td>
+                            <td>Challenger</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>French Open (Junior)</td>
+                            <td>Grand Slam</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="profile-section">
+                <h3><span class="emoji">🚀</span> Notable Achievements</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">2022 ITF Junior World Champion</li>
+                    <li class="list-group-item">Youngest French player to win an ATP title since 2005</li>
+                    <li class="list-group-item">Fastest serve recorded: 149 mph (240 km/h)</li>
+                    <li class="list-group-item">Named ATP Newcomer of the Year 2023</li>
+                </ul>
+            </div>
+            
+            <div class="profile-section">
+                <h3><span class="emoji">🎾</span> Playing Style</h3>
+                <p>Mpetshi Perricard is known for his powerful serve and aggressive baseline game. His height gives him a significant advantage on serve, regularly clocking over 140 mph. He prefers to dictate play with his forehand and has developed an effective slice backhand to complement his powerful two-hander. His movement for his height is exceptional, allowing him to cover the court effectively.</p>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="index.html" class="cta-button">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div class="footer-logo">Sported Corner</div>
+                <p>Your ultimate destination for sports news, scores, and updates from around the world.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Sports</h3>
+                <ul>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Basketball</a></li>
+                    <li><a href="#">Tennis</a></li>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Baseball</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:contact@sportedcorner.co.bw">contact@sportedcorner.co.bw</a></li>
+                    <li><a href="tel:+26776564395">+267 76564395</a></li>
+                    <li><a href="#">Plot 16667, Gaborone, Botswana</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Sported Corner. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
